@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function ProductDetailsPage() {
@@ -12,7 +12,6 @@ function ProductDetailsPage() {
 
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
-
 
 
   return (
