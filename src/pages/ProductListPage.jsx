@@ -16,15 +16,19 @@ const fetchProducts= async () => {
      } catch (error) {
     console.log ("Error fetching products:", error);
     }
-  }
+  };
  fetchProducts();
 },[]);
 
 
-<li key ={task.id}>{task}</li>
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+       <h1>Product List</h1>
+       <ul>
+      {products.map((product) => (
+      <li key={product.id}><Link to={`/product/details/${product.id}`}>{product.title}</Link></li>
+       ))}
+       </ul>
     </div>
   );
 }
